@@ -9,9 +9,9 @@ object Main {
       Class.forName("com.mysql.jdbc.Driver").newInstance();
       var con = 
         DriverManager.getConnection("jdbc:mysql://" + sys.env("MYSQL_PORT_3306_TCP_ADDR") +
-          "/hoge?" + 
-          "user=root" + 
-          "&password=" + sys.env("MYSQL_ENV_MYSQL_ROOT_PASSWORD")
+          "/"+ sys.env("MYSQL_ENV_MYSQL_DATABASE") + "?" + 
+          "user="+ sys.env("MYSQL_ENV_MYSQL_USER") + 
+          "&password=" + sys.env("MYSQL_ENV_MYSQL_PASSWORD")
           );
       try {
         var stmt = con.createStatement()

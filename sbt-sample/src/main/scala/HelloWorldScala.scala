@@ -36,6 +36,5 @@ object HelloWorldScala {
     CollectionSample.exec()
     import FutureSample._
     FutureSample.exec()
-
   }
 }
